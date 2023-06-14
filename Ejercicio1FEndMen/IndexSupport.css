@@ -1,59 +1,122 @@
-.Uno {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    margin: 10px;
-    border-top: 10px;
-    border-bottom: 10px;
-    border-bottom: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: aquamarine;
-
+body{
+    font-family:Arial, Helvetica, sans-serif 
 }
 
-p{
-    font-style: italic;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: small;
-}
-.Dos{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: center;
+#main-container{
+    margin: 75px 25px 75px 25px;
 }
 
-.Principal{
-    font-size: small;
-    text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+#contenedor-detarjetas{
+    display: flex;
+    flex-direction: column;
 }
 
-
-.Tres{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: left;
+.tarjeta{
+    border-radius: 6px;
+    box-shadow: 10px 6px 62px 2 px color(srgb 0,0,0,0.23);
+    margin-bottom: 40px;
+    padding: 0 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
-.Cuadro1{
-    background-color: rgb(151, 151, 76);
-    border-radius: 5%;
-    border-color: rgb(36, 186, 139);
+.svg{
+    width: 20%;
+    align-self: flex-end;
+    margin-top: 25px;
 }
 
-.Cuadro2{
-    background-color: rgb(19, 192, 111);
-    border-radius: 5%;
-    border-color: rgb(47, 47, 207);
-}
-.Cuadro3{
-    background-color: rgb(151, 37, 222);
-    border-radius: 5%;
-    border-color: rgb(210, 27, 164);
-}
-.Cuadro4{
-    background-color: rgb(212, 91, 25);
-    border-radius: 5%;
-    border-color: rgb(222, 182, 23);
+#text-1, #text-3, .texto-tarjeta{
+    color: #a3a5ae;
+    font-size: 15px;
 }
 
+#text-1{
+    font-weight: 200;
+    font-size: 1.5rem;
+    margin-bottom: -3px;
+}
 
+#text-2{
+    color: rgba(193, 190, 190, 0.863);
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+.texto-tarjeta{
+    font-size: 14px;
+}
+
+.tarjeta-header{
+    color: #4c4e61;
+    margin-bottom: -10px;
+}
+
+#Titulomayorcontenedor{
+    margin: 0 0 70px 0;
+    text-align:justify;
+}
+
+#tarjeta-verde{
+    border-top: 4px solid green;
+}
+
+#tarjeta-roja{
+    border-top: 4px solid red;
+}
+
+#tarjeta-naranja{
+    border-top: 4px solid orange;
+}
+
+#tarjeta-azul{
+    border-top: 4px solid blue;
+}
+
+#text-1, #text-2{
+    font-size: 1.9rem;
+}
+
+@media (min-width: 675px){
+    #contenedor-detarjetas{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(4, 120px);
+        grid-gap: 20px;
+    }
+
+    #tarjeta-verde{
+        grid-column: 1/2;
+        grid-row: 2/4;
+    }
+
+    #tarjeta-roja{
+        grid-column: 2/3;
+        grid-row: 1/3;
+    }
+
+    #tarjeta-naranja{
+        grid-column: 2/3;
+        grid-row: 3/5;
+    }
+    #tarjeta-azul{
+        grid-column: 3/4;
+        grid-row: 2/4;
+    }
+    .svg{
+        position: absolute;
+        bottom: 20px;
+        width: 25%;
+    }
+    #main-container{
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #body-container{
+        display: flex;
+    }
+}
