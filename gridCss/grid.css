@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: system-ui;
+    padding: 2rem;
+}
+
+.container{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr); /*1fr 2fr 1fr 1fr 1fr 1fr*/
+    grid-template-rows: repeat(2, 1fr);
+
+}
+
+.item{
+    background: tomato;
+    color: azure;
+    padding: 1rem;
+}
+.item:first-child{
+    background-color: blue;
+    
+}
+.item:nth-child(2){
+    background-color: brown;
+}
+
+.item:last-child{
+    background-color: red;
+    grid-row: 2;
+    grid-column: -1/-2;
+}

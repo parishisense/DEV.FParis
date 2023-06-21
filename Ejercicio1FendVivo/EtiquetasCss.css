@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif ;
+    background-color: rgba(52, 49, 50, 0.056);
+}
+
+
+/* 
+img{
+    width: 100%;
+    display: block;
+}
+*/
+
+/* estilos generales - compartidos*/
+.wrapper{
+    width: 80%;
+    max-width: 1440px;
+    margin: 2rem auto; /*centra la caja*/
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.col{
+    flex-basis: 33.33%;
+    background: green;
+}
+
+.direction-column{
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+/* estilos individuales-especificos */
+
+.atributtions{
+    font-size: 11px;
+    text-align: center;
+}
+
+
+.wrapper article{
+    padding: 1rem;
+    border-top: 6px solid orange;
+    border-radius: 10px;
+    box-shadow: 9px 15px 12px 5px black;
+}
+.wrapper article p{
+    margin: 0.6rem 0;
+}
+
+.wrapper article div{
+    text-align: right;
+}
+
+.wrapper article div img{
+    vertical-align: middle;
+}
+
+
+.card div img{
+    vertical-align: middle;
+    width: 50%;
+}
+.atributtions{
+    font-size: 11px;
+    text-align: center;
+}
+
+.atributtions a {
+    color: #64937796 ;
+}
+
+/* responsive */
+/*Mediaqueries -> Breakpoint */
+/*reescribir las reglas de escritorio*/
+/*tablet*/
+@media screen and (max-width: 768px) {
+    .wrapper{
+        width: 60%;
+    }
+    .row{
+        flex-wrap: wrap;
+    }
+    .col{
+        flex-basis: 100%;
+    }
+    
+}
+
+/*mobile*/
+@media screen and (max-width:375px) {
+    .wrapper{
+        width: 90%;
+    }   
+}
+
